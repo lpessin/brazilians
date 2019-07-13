@@ -16,7 +16,7 @@ with open('all', mode='r') as inall:
 for br in all:
     ac = Account(br)
     #print(ac.name, ac.profile.get('location'))
-    local = ac.profile.get('location').upper()
+    local = str(ac.profile.get('location')).upper()
     for a in atlas:
         if a in local:
             print(ac.name, ac.profile.get('location'))
